@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://buaim4mku5vl2"]
+[gd_scene load_steps=2 format=3 uid="uid://buaim4mku5vl2"]
+
+[ext_resource type="Texture2D" uid="uid://b54pgfn0vwnhs" path="res://assets/sprites/pets/dog.jpg" id="1_77g6y"]
 
 [node name="Home" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(313, 585)
+texture = ExtResource("1_77g6y")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 276.0
+offset_top = 45.0
+offset_right = 316.0
+offset_bottom = 85.0
