@@ -14,6 +14,7 @@ config/name="PetTopia"
 run/main_scene="uid://dt3w5oy1nanlt"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="uid://dt3w5oy1nanlt"
 
 [display]
 
