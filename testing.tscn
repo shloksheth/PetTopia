@@ -29,8 +29,8 @@ theme_override_font_sizes/font_size = 200
 text = "add label text"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(336, 117)
-scale = Vector2(3.0513513, 2.337838)
+position = Vector2(400.1875, 138.75002)
+scale = Vector2(1.5979728, 1.1587838)
 texture = ExtResource("2_co24e")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
