@@ -223,7 +223,7 @@ script = ExtResource("8_a7whw")
 position = Vector2(360, 700)
 sprite_frames = SubResource("SpriteFrames_7yxrd")
 animation = &"idle"
-frame_progress = 0.06367586
+frame_progress = 0.5827268
 
 [node name="PetNameLabel" type="RichTextLabel" parent="Home Control/PetAreaControl"]
 layout_mode = 0
