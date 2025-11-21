@@ -24,4 +24,4 @@ Feed, play, and care for your pet while earning coins and unlocking achievements
 
 ## 👥 Contributors
 - Shlok Sheth
-- Aditya Anil Kunnakatil
+- Aditya Anil Kunnukatil
