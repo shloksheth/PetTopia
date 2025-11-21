@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://buaim4mku5vl2"]
+[gd_scene load_steps=21 format=3 uid="uid://buaim4mku5vl2"]
 
 [ext_resource type="Texture2D" uid="uid://pa818wd6l3wg" path="res://assets/backgrounds/backgroundhomescreen3.png" id="1_ty1ao"]
 [ext_resource type="Texture2D" uid="uid://d3oqx8jsaacei" path="res://assets/icons/Screenshot 2025-11-20 202636.png" id="2_ty1ao"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://k7xgjpl4wmrh" path="res://assets/sprites/pets/idle dog animation/idle 6.png" id="13_yikgj"]
 [ext_resource type="Texture2D" uid="uid://xke0ynkxnloy" path="res://assets/sprites/pets/idle dog animation/idle 7.png" id="14_xaqj1"]
 [ext_resource type="Script" uid="uid://dv2delyhry6hg" path="res://scripts/ui/HelpPopup.gd" id="15_qnf6t"]
+[ext_resource type="Script" uid="uid://bo4u6k2st5nvf" path="res://scripts/ui/testbutton.gd" id="17_esm83"]
 
 [sub_resource type="SystemFont" id="SystemFont_kccng"]
 
@@ -222,7 +223,7 @@ script = ExtResource("8_a7whw")
 position = Vector2(360, 700)
 sprite_frames = SubResource("SpriteFrames_7yxrd")
 animation = &"idle"
-frame_progress = 0.6972985
+frame_progress = 0.06367586
 
 [node name="PetNameLabel" type="RichTextLabel" parent="Home Control/PetAreaControl"]
 layout_mode = 0
@@ -328,3 +329,12 @@ size_flags_vertical = 0
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4jx0l")
 text = "Close"
+
+[node name="testbutton" type="Button" parent="Home Control"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 896.0
+offset_right = 129.0
+offset_bottom = 954.0
+text = "test"
+script = ExtResource("17_esm83")
