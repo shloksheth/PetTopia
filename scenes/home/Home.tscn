@@ -1,17 +1,59 @@
-[gd_scene load_steps=2 format=3 uid="uid://buaim4mku5vl2"]
+[gd_scene load_steps=5 format=3 uid="uid://buaim4mku5vl2"]
 
+[ext_resource type="Texture2D" uid="uid://co4pfx35hisbo" path="res://assets/backgrounds/homescreenbackgorund.jpg" id="1_43ues"]
 [ext_resource type="Texture2D" uid="uid://b54pgfn0vwnhs" path="res://assets/sprites/pets/dog.jpg" id="1_77g6y"]
+[ext_resource type="Texture2D" path="res://assets/Screenshot 2025-11-20 202636.png" id="2_alh7a"]
+[ext_resource type="Texture2D" uid="uid://7f1eyao7pp84" path="res://assets/icons/pngkey.com-gold-png-297069.png" id="3_cm4s5"]
 
 [node name="Home" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(313, 585)
-texture = ExtResource("1_77g6y")
-
-[node name="Control" type="Control" parent="."]
+[node name="Home Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 276.0
-offset_top = 45.0
-offset_right = 316.0
-offset_bottom = 85.0
+offset_right = 720.0
+offset_bottom = 1280.0
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Home Control"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+texture = ExtResource("1_43ues")
+expand_mode = 1
+
+[node name="guidelines" type="TextureRect" parent="Home Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_right = 480.0
+offset_bottom = 853.3334
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_alh7a")
+
+[node name="Top Bar" type="Control" parent="Home Control"]
+layout_mode = 1
+anchor_right = 1.0
+offset_bottom = 80.0
+
+[node name="ColorRect" type="ColorRect" parent="Home Control/Top Bar"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.32426608, 0.8056621, 0.87927884, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Home Control/Top Bar"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 19.0
+offset_right = 71.0
+offset_bottom = 59.0
+texture = ExtResource("3_cm4s5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Home Control"]
+position = Vector2(377, 621)
+scale = Vector2(2.7111487, 3.9501693)
+texture = ExtResource("1_77g6y")

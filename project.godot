@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PetTopia"
-run/main_scene="uid://dt3w5oy1nanlt"
+run/main_scene="uid://buaim4mku5vl2"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="uid://dt3w5oy1nanlt"
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
+window/stretch/mode="viewport"
 window/handheld/orientation=1
 
 [dotnet]
