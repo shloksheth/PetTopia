@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://buaim4mku5vl2"]
+[gd_scene load_steps=20 format=3 uid="uid://buaim4mku5vl2"]
 
 [ext_resource type="Texture2D" uid="uid://pa818wd6l3wg" path="res://assets/backgrounds/backgroundhomescreen3.png" id="1_ty1ao"]
 [ext_resource type="Texture2D" uid="uid://d3oqx8jsaacei" path="res://assets/icons/Screenshot 2025-11-20 202636.png" id="2_ty1ao"]
@@ -9,11 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://deeta1mjbu0x0" path="res://assets/icons/orange square.png" id="6_bbp0q"]
 [ext_resource type="Script" uid="uid://be4frm6wcyg0a" path="res://scripts/ui/SettingsPopup.gd" id="7_hsodw"]
 [ext_resource type="Texture2D" uid="uid://wcg4tsr5nhma" path="res://assets/sprites/pets/idle dog animation/idle 1.png" id="8_4jx0l"]
+[ext_resource type="Script" uid="uid://b0ognybs14qxr" path="res://scripts/ui/PetAreaControl.gd" id="8_a7whw"]
 [ext_resource type="Texture2D" uid="uid://6tv7oy7absni" path="res://assets/sprites/pets/idle dog animation/idle 2.png" id="9_qnf6t"]
 [ext_resource type="Texture2D" uid="uid://kn1ssk4a7ogu" path="res://assets/sprites/pets/idle dog animation/idle 4.png" id="11_esm83"]
 [ext_resource type="Texture2D" uid="uid://c7xt6q7af5q4o" path="res://assets/sprites/pets/idle dog animation/idle 5.png" id="12_vub6t"]
 [ext_resource type="Texture2D" uid="uid://k7xgjpl4wmrh" path="res://assets/sprites/pets/idle dog animation/idle 6.png" id="13_yikgj"]
 [ext_resource type="Texture2D" uid="uid://xke0ynkxnloy" path="res://assets/sprites/pets/idle dog animation/idle 7.png" id="14_xaqj1"]
+[ext_resource type="Script" uid="uid://dv2delyhry6hg" path="res://scripts/ui/HelpPopup.gd" id="15_qnf6t"]
 
 [sub_resource type="SystemFont" id="SystemFont_kccng"]
 
@@ -205,11 +207,6 @@ theme_override_fonts/font = SubResource("SystemFont_kccng")
 theme_override_font_sizes/font_size = 23
 text = "o"
 
-[node name="helppopup" type="MarginContainer" parent="Home Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="PetAreaControl" type="Control" parent="Home Control"]
 layout_mode = 1
 anchors_preset = 15
@@ -219,12 +216,34 @@ offset_top = 141.0
 offset_bottom = -326.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("8_a7whw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Home Control/PetAreaControl"]
 position = Vector2(360, 700)
 sprite_frames = SubResource("SpriteFrames_7yxrd")
 animation = &"idle"
-frame_progress = 0.8001587
+frame_progress = 0.6972985
+
+[node name="PetNameLabel" type="RichTextLabel" parent="Home Control/PetAreaControl"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = -34.0
+offset_right = 621.0
+offset_bottom = 19.0
+theme_override_font_sizes/normal_font_size = 37
+theme_override_font_sizes/bold_font_size = 37
+text = "fluffy"
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="RenameButton" type="Button" parent="Home Control/PetAreaControl"]
+layout_mode = 0
+offset_left = 590.0
+offset_top = -34.0
+offset_right = 652.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 39
+text = "🏷️"
 
 [node name="SettingsPopup" type="PopupPanel" parent="Home Control"]
 oversampling_override = 1.0
@@ -269,46 +288,40 @@ text = "Close"
 
 [node name="Help Popup" type="PopupPanel" parent="Home Control"]
 oversampling_override = 1.0
-position = Vector2i(60, 200)
+position = Vector2i(60, 0)
 size = Vector2i(1140, 900)
-visible = true
 max_size = Vector2i(16384, 900)
-script = ExtResource("7_hsodw")
+script = ExtResource("15_qnf6t")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Home Control/Help Popup"]
+[node name="MarginContainer" type="MarginContainer" parent="Home Control/Help Popup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 4.0
 offset_top = 4.0
-offset_right = 566.0
-offset_bottom = 896.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="helpheader" type="Label" parent="Home Control/Help Popup/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Home Control/Help Popup/MarginContainer"]
+custom_minimum_size = Vector2(0, 800)
+layout_mode = 2
+
+[node name="helpheader" type="Label" parent="Home Control/Help Popup/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 80
 text = "Help"
 
-[node name="Label" type="Label" parent="Home Control/Help Popup/VBoxContainer"]
+[node name="Label" type="Label" parent="Home Control/Help Popup/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 18
 text = "This is your help information"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Home Control/Help Popup/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="volumesubheader" type="Label" parent="Home Control/Help Popup/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Volume:"
-
-[node name="VolumeSlider" type="HSlider" parent="Home Control/Help Popup/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(400, 200)
-layout_mode = 2
-value = 50.0
-
-[node name="CloseButton" type="Button" parent="Home Control/Help Popup/VBoxContainer"]
+[node name="CloseButton" type="Button" parent="Home Control/Help Popup/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
