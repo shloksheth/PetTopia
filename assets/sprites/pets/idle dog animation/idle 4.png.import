@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b54pgfn0vwnhs"
-path="res://.godot/imported/dog.jpg-bfb81fcdfa74b692f502269e3a44b9b0.ctex"
+uid="uid://kn1ssk4a7ogu"
+path="res://.godot/imported/idle 4.png-2ea8e254030c81f1219259c07586297c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/pets/dog.jpg"
-dest_files=["res://.godot/imported/dog.jpg-bfb81fcdfa74b692f502269e3a44b9b0.ctex"]
+source_file="res://assets/sprites/pets/idle dog animation/idle 4.png"
+dest_files=["res://.godot/imported/idle 4.png-2ea8e254030c81f1219259c07586297c.ctex"]
 
 [params]
 

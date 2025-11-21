@@ -1,9 +1,78 @@
-[gd_scene load_steps=5 format=3 uid="uid://buaim4mku5vl2"]
+[gd_scene load_steps=14 format=3 uid="uid://buaim4mku5vl2"]
 
-[ext_resource type="Texture2D" uid="uid://co4pfx35hisbo" path="res://assets/backgrounds/homescreenbackgorund.jpg" id="1_43ues"]
-[ext_resource type="Texture2D" uid="uid://b54pgfn0vwnhs" path="res://assets/sprites/pets/dog.jpg" id="1_77g6y"]
-[ext_resource type="Texture2D" path="res://assets/Screenshot 2025-11-20 202636.png" id="2_alh7a"]
-[ext_resource type="Texture2D" uid="uid://7f1eyao7pp84" path="res://assets/icons/pngkey.com-gold-png-297069.png" id="3_cm4s5"]
+[ext_resource type="Texture2D" uid="uid://pa818wd6l3wg" path="res://assets/backgrounds/backgroundhomescreen3.png" id="1_ty1ao"]
+[ext_resource type="Texture2D" uid="uid://d3oqx8jsaacei" path="res://assets/icons/Screenshot 2025-11-20 202636.png" id="2_ty1ao"]
+[ext_resource type="Texture2D" uid="uid://dmygidwi4s0o7" path="res://assets/icons/button.png" id="3_57c6s"]
+[ext_resource type="Texture2D" uid="uid://bpsobsvaeoiip" path="res://assets/icons/gold coin.png" id="4_ty1ao"]
+[ext_resource type="Texture2D" uid="uid://cj6vtkyan2njc" path="res://assets/icons/gems.png" id="5_0kdue"]
+[ext_resource type="Texture2D" uid="uid://deeta1mjbu0x0" path="res://assets/icons/orange square.png" id="6_bbp0q"]
+[ext_resource type="Texture2D" uid="uid://wcg4tsr5nhma" path="res://assets/sprites/pets/idle dog animation/idle 1.png" id="8_4jx0l"]
+[ext_resource type="Texture2D" uid="uid://6tv7oy7absni" path="res://assets/sprites/pets/idle dog animation/idle 2.png" id="9_qnf6t"]
+[ext_resource type="Texture2D" uid="uid://kn1ssk4a7ogu" path="res://assets/sprites/pets/idle dog animation/idle 4.png" id="11_esm83"]
+[ext_resource type="Texture2D" uid="uid://c7xt6q7af5q4o" path="res://assets/sprites/pets/idle dog animation/idle 5.png" id="12_vub6t"]
+[ext_resource type="Texture2D" uid="uid://k7xgjpl4wmrh" path="res://assets/sprites/pets/idle dog animation/idle 6.png" id="13_yikgj"]
+[ext_resource type="Texture2D" uid="uid://xke0ynkxnloy" path="res://assets/sprites/pets/idle dog animation/idle 7.png" id="14_xaqj1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7yxrd"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("8_4jx0l")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_qnf6t")
+}, {
+"duration": 8.0,
+"texture": ExtResource("8_4jx0l")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_qnf6t")
+}, {
+"duration": 8.0,
+"texture": ExtResource("8_4jx0l")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_qnf6t")
+}, {
+"duration": 8.0,
+"texture": ExtResource("8_4jx0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_esm83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yikgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_esm83")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_vub6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xaqj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vub6t")
+}, {
+"duration": 5.0,
+"texture": ExtResource("8_4jx0l")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_qnf6t")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_qnf6t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Home" type="Node2D"]
 
@@ -14,12 +83,14 @@ offset_right = 720.0
 offset_bottom = 1280.0
 metadata/_edit_group_ = true
 
-[node name="TextureRect" type="TextureRect" parent="Home Control"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Home Control"]
 layout_mode = 0
 offset_right = 720.0
 offset_bottom = 1280.0
-texture = ExtResource("1_43ues")
-expand_mode = 1
+texture = ExtResource("1_ty1ao")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
 
 [node name="guidelines" type="TextureRect" parent="Home Control"]
 visible = false
@@ -28,32 +99,105 @@ anchors_preset = -1
 offset_right = 480.0
 offset_bottom = 853.3334
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("2_alh7a")
+texture = ExtResource("2_ty1ao")
 
 [node name="Top Bar" type="Control" parent="Home Control"]
 layout_mode = 1
 anchor_right = 1.0
 offset_bottom = 80.0
 
-[node name="ColorRect" type="ColorRect" parent="Home Control/Top Bar"]
-visible = false
+[node name="coin bg" type="TextureRect" parent="Home Control/Top Bar"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -75.0
+offset_right = 236.0
+offset_bottom = 160.0
+texture = ExtResource("3_57c6s")
+expand_mode = 1
+
+[node name="Coin" type="NinePatchRect" parent="Home Control/Top Bar"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 19.0
+offset_right = 74.0
+offset_bottom = 59.0
+texture = ExtResource("4_ty1ao")
+
+[node name="gem bg" type="TextureRect" parent="Home Control/Top Bar"]
+layout_mode = 0
+offset_left = 226.0
+offset_top = -75.0
+offset_right = 431.0
+offset_bottom = 160.0
+texture = ExtResource("3_57c6s")
+expand_mode = 1
+
+[node name="Gem" type="NinePatchRect" parent="Home Control/Top Bar"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 11.0
+offset_right = 307.0
+offset_bottom = 68.0
+texture = ExtResource("5_0kdue")
+
+[node name="orange button" type="NinePatchRect" parent="Home Control/Top Bar"]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 6.0
+offset_right = 546.0
+offset_bottom = 78.0
+texture = ExtResource("6_bbp0q")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="orange button2" type="NinePatchRect" parent="Home Control/Top Bar"]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 6.0
+offset_right = 624.0
+offset_bottom = 78.0
+texture = ExtResource("6_bbp0q")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="orange button3" type="NinePatchRect" parent="Home Control/Top Bar"]
+layout_mode = 0
+offset_left = 629.0
+offset_top = 6.0
+offset_right = 703.0
+offset_bottom = 78.0
+texture = ExtResource("6_bbp0q")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="settingspopup" type="MarginContainer" parent="Home Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="helppopup" type="MarginContainer" parent="Home Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PetAreaControl" type="Control" parent="Home Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 141.0
+offset_bottom = -326.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.32426608, 0.8056621, 0.87927884, 1)
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Home Control/Top Bar"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = 19.0
-offset_right = 71.0
-offset_bottom = 59.0
-texture = ExtResource("3_cm4s5")
-
-[node name="Sprite2D" type="Sprite2D" parent="Home Control"]
-position = Vector2(377, 621)
-scale = Vector2(2.7111487, 3.9501693)
-texture = ExtResource("1_77g6y")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Home Control/PetAreaControl"]
+position = Vector2(360, 700)
+sprite_frames = SubResource("SpriteFrames_7yxrd")
+animation = &"idle"
+frame_progress = 0.7604335
