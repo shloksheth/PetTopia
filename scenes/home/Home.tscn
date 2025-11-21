@@ -1,17 +1,21 @@
-[gd_scene load_steps=14 format=3 uid="uid://buaim4mku5vl2"]
+[gd_scene load_steps=18 format=3 uid="uid://buaim4mku5vl2"]
 
 [ext_resource type="Texture2D" uid="uid://pa818wd6l3wg" path="res://assets/backgrounds/backgroundhomescreen3.png" id="1_ty1ao"]
 [ext_resource type="Texture2D" uid="uid://d3oqx8jsaacei" path="res://assets/icons/Screenshot 2025-11-20 202636.png" id="2_ty1ao"]
+[ext_resource type="Script" uid="uid://jqfhqqk2mv15" path="res://scripts/ui/TopBar.gd" id="3_4jx0l"]
 [ext_resource type="Texture2D" uid="uid://dmygidwi4s0o7" path="res://assets/icons/button.png" id="3_57c6s"]
 [ext_resource type="Texture2D" uid="uid://bpsobsvaeoiip" path="res://assets/icons/gold coin.png" id="4_ty1ao"]
 [ext_resource type="Texture2D" uid="uid://cj6vtkyan2njc" path="res://assets/icons/gems.png" id="5_0kdue"]
 [ext_resource type="Texture2D" uid="uid://deeta1mjbu0x0" path="res://assets/icons/orange square.png" id="6_bbp0q"]
+[ext_resource type="Script" uid="uid://be4frm6wcyg0a" path="res://scripts/ui/SettingsPopup.gd" id="7_hsodw"]
 [ext_resource type="Texture2D" uid="uid://wcg4tsr5nhma" path="res://assets/sprites/pets/idle dog animation/idle 1.png" id="8_4jx0l"]
 [ext_resource type="Texture2D" uid="uid://6tv7oy7absni" path="res://assets/sprites/pets/idle dog animation/idle 2.png" id="9_qnf6t"]
 [ext_resource type="Texture2D" uid="uid://kn1ssk4a7ogu" path="res://assets/sprites/pets/idle dog animation/idle 4.png" id="11_esm83"]
 [ext_resource type="Texture2D" uid="uid://c7xt6q7af5q4o" path="res://assets/sprites/pets/idle dog animation/idle 5.png" id="12_vub6t"]
 [ext_resource type="Texture2D" uid="uid://k7xgjpl4wmrh" path="res://assets/sprites/pets/idle dog animation/idle 6.png" id="13_yikgj"]
 [ext_resource type="Texture2D" uid="uid://xke0ynkxnloy" path="res://assets/sprites/pets/idle dog animation/idle 7.png" id="14_xaqj1"]
+
+[sub_resource type="SystemFont" id="SystemFont_kccng"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7yxrd"]
 animations = [{
@@ -74,6 +78,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4jx0l"]
+
 [node name="Home" type="Node2D"]
 
 [node name="Home Control" type="Control" parent="."]
@@ -105,6 +111,7 @@ texture = ExtResource("2_ty1ao")
 layout_mode = 1
 anchor_right = 1.0
 offset_bottom = 80.0
+script = ExtResource("3_4jx0l")
 
 [node name="coin bg" type="TextureRect" parent="Home Control/Top Bar"]
 layout_mode = 0
@@ -140,11 +147,11 @@ offset_right = 307.0
 offset_bottom = 68.0
 texture = ExtResource("5_0kdue")
 
-[node name="orange button" type="NinePatchRect" parent="Home Control/Top Bar"]
+[node name="settingoutline" type="NinePatchRect" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_left = 472.0
+offset_left = 516.0
 offset_top = 6.0
-offset_right = 546.0
+offset_right = 590.0
 offset_bottom = 78.0
 texture = ExtResource("6_bbp0q")
 patch_margin_left = 3
@@ -152,23 +159,25 @@ patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
 
-[node name="orange button2" type="NinePatchRect" parent="Home Control/Top Bar"]
-layout_mode = 0
-offset_left = 550.0
-offset_top = 6.0
-offset_right = 624.0
-offset_bottom = 78.0
-texture = ExtResource("6_bbp0q")
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
+[node name="SettingsMenu" type="MenuButton" parent="Home Control/Top Bar/settingoutline"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.058000002
+anchor_top = 0.083000004
+anchor_right = 0.90400004
+anchor_bottom = 0.9110001
+offset_left = -13.292
+offset_top = -8.976
+offset_right = 16.103996
+offset_bottom = 19.407997
+theme_override_font_sizes/font_size = 51
+text = "⚙️"
 
 [node name="orange button3" type="NinePatchRect" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_left = 629.0
+offset_left = 594.0
 offset_top = 6.0
-offset_right = 703.0
+offset_right = 668.0
 offset_bottom = 78.0
 texture = ExtResource("6_bbp0q")
 patch_margin_left = 3
@@ -176,10 +185,25 @@ patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
 
-[node name="settingspopup" type="MarginContainer" parent="Home Control"]
+[node name="coinlabel" type="Label" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 80.0
+offset_top = 25.0
+offset_right = 202.0
+offset_bottom = 57.0
+theme_override_fonts/font = SubResource("SystemFont_kccng")
+theme_override_font_sizes/font_size = 23
+text = "0"
+
+[node name="gemlabel" type="Label" parent="Home Control/Top Bar"]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 25.0
+offset_right = 397.0
+offset_bottom = 57.0
+theme_override_fonts/font = SubResource("SystemFont_kccng")
+theme_override_font_sizes/font_size = 23
+text = "o"
 
 [node name="helppopup" type="MarginContainer" parent="Home Control"]
 layout_mode = 0
@@ -200,4 +224,94 @@ grow_vertical = 2
 position = Vector2(360, 700)
 sprite_frames = SubResource("SpriteFrames_7yxrd")
 animation = &"idle"
-frame_progress = 0.7604335
+frame_progress = 0.8001587
+
+[node name="SettingsPopup" type="PopupPanel" parent="Home Control"]
+oversampling_override = 1.0
+position = Vector2i(60, 200)
+size = Vector2i(600, 900)
+max_size = Vector2i(16384, 900)
+script = ExtResource("7_hsodw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Home Control/SettingsPopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 596.0
+offset_bottom = 896.0
+
+[node name="settingsheader" type="Label" parent="Home Control/SettingsPopup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 80
+text = "Settings"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Home Control/SettingsPopup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="volumesubheader" type="Label" parent="Home Control/SettingsPopup/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Volume:"
+
+[node name="VolumeSlider" type="HSlider" parent="Home Control/SettingsPopup/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+value = 50.0
+
+[node name="CloseButton" type="Button" parent="Home Control/SettingsPopup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4jx0l")
+text = "Close"
+
+[node name="Help Popup" type="PopupPanel" parent="Home Control"]
+oversampling_override = 1.0
+position = Vector2i(60, 200)
+size = Vector2i(1140, 900)
+visible = true
+max_size = Vector2i(16384, 900)
+script = ExtResource("7_hsodw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Home Control/Help Popup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 566.0
+offset_bottom = 896.0
+
+[node name="helpheader" type="Label" parent="Home Control/Help Popup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 80
+text = "Help"
+
+[node name="Label" type="Label" parent="Home Control/Help Popup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 18
+text = "This is your help information"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Home Control/Help Popup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="volumesubheader" type="Label" parent="Home Control/Help Popup/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Volume:"
+
+[node name="VolumeSlider" type="HSlider" parent="Home Control/Help Popup/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+value = 50.0
+
+[node name="CloseButton" type="Button" parent="Home Control/Help Popup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4jx0l")
+text = "Close"

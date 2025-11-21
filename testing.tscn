@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dt3w5oy1nanlt"]
 
 [ext_resource type="Script" uid="uid://01mhy45lm4e5" path="res://testing.gd" id="1_qrja6"]
-[ext_resource type="Texture2D" uid="uid://b54pgfn0vwnhs" path="res://assets/sprites/pets/dog.jpg" id="2_co24e"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qrja6"]
+load_path = "res://.godot/imported/dog.jpg-bfb81fcdfa74b692f502269e3a44b9b0.ctex"
 
 [node name="Testing" type="Control"]
 layout_mode = 3
@@ -31,9 +33,9 @@ text = "add label text"
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(344, 137)
 scale = Vector2(1.5979728, 1.1587838)
-texture = ExtResource("2_co24e")
+texture = SubResource("CompressedTexture2D_qrja6")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(402, 625.99994)
 scale = Vector2(1.916892, 1.4020269)
-texture = ExtResource("2_co24e")
+texture = SubResource("CompressedTexture2D_qrja6")
