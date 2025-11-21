@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://buaim4mku5vl2"]
+[gd_scene load_steps=23 format=3 uid="uid://buaim4mku5vl2"]
 
 [ext_resource type="Texture2D" uid="uid://pa818wd6l3wg" path="res://assets/backgrounds/backgroundhomescreen3.png" id="1_ty1ao"]
 [ext_resource type="Texture2D" uid="uid://d3oqx8jsaacei" path="res://assets/icons/Screenshot 2025-11-20 202636.png" id="2_ty1ao"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://xke0ynkxnloy" path="res://assets/sprites/pets/idle dog animation/idle 7.png" id="14_xaqj1"]
 [ext_resource type="Script" uid="uid://dv2delyhry6hg" path="res://scripts/ui/HelpPopup.gd" id="15_qnf6t"]
 [ext_resource type="Script" uid="uid://bo4u6k2st5nvf" path="res://scripts/ui/testbutton.gd" id="17_esm83"]
+[ext_resource type="Script" uid="uid://dbsbbw0s4tvl4" path="res://scripts/ui/FeedControl.gd" id="18_vub6t"]
 
 [sub_resource type="SystemFont" id="SystemFont_kccng"]
 
@@ -82,6 +83,9 @@ animations = [{
 }]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4jx0l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vub6t"]
+bg_color = Color(0.99215686, 0.6431373, 0.58431375, 1)
 
 [node name="Home" type="Node2D"]
 
@@ -223,7 +227,7 @@ script = ExtResource("8_a7whw")
 position = Vector2(360, 700)
 sprite_frames = SubResource("SpriteFrames_7yxrd")
 animation = &"idle"
-frame_progress = 0.5827268
+frame_progress = 0.5778234
 
 [node name="PetNameLabel" type="RichTextLabel" parent="Home Control/PetAreaControl"]
 layout_mode = 0
@@ -300,8 +304,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 4.0
 offset_top = 4.0
-offset_right = -4.0
-offset_bottom = -4.0
+offset_right = 1136.0
+offset_bottom = 896.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -338,3 +342,27 @@ offset_right = 129.0
 offset_bottom = 954.0
 text = "test"
 script = ExtResource("17_esm83")
+
+[node name="FeedControl" type="Control" parent="Home Control"]
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 1070.0
+offset_right = 719.0
+offset_bottom = 1190.0
+script = ExtResource("18_vub6t")
+
+[node name="FoodButton" type="Button" parent="Home Control/FeedControl"]
+layout_mode = 0
+offset_left = 72.0
+offset_right = 188.0
+offset_bottom = 120.0
+pivot_offset = Vector2(200, 150)
+theme_override_font_sizes/font_size = 79
+theme_override_styles/normal = SubResource("StyleBoxFlat_vub6t")
+text = "🍖"
+
+[node name="FoodPopup" type="PopupPanel" parent="Home Control/FeedControl"]
+
+[node name="FoodList" type="VBoxContainer" parent="Home Control/FeedControl/FoodPopup"]
+offset_right = 40.0
+offset_bottom = 40.0

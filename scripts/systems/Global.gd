@@ -1,13 +1,17 @@
 extends Node
 
-# --- Currency & name tracking ---
+# --- Currency and food tracking ---
 var coins: int = 0
 var gems: int = 0
-var player_name: String = ""
+var food_inventory: Dictionary = {
+	"Apple": 3,
+	"Meat": 2,
+	"Fish": 1
+}
 
 signal coins_changed(new_value: int)
 signal gems_changed(new_value: int)
-signal name_changed(new_value: String)
+signal food_changed(food: Dictionary)
 
 const SAVE_PATH := "user://save_data.json"
 
@@ -24,16 +28,17 @@ func add_gems(amount: int) -> void:
 	gems_changed.emit(gems)
 	save_data()
 
-func set_player_name(new_name: String) -> void:
-	player_name = new_name
-	name_changed.emit(player_name)
-	save_data()
+func consume_food(item: String) -> void:
+	if food_inventory.has(item) and food_inventory[item] > 0:
+		food_inventory[item] -= 1
+		food_changed.emit(food_inventory)
+		save_data()
 
 func save_data() -> void:
 	var data: Dictionary = {
 		"coins": coins,
 		"gems": gems,
-		"name": player_name
+		"food": food_inventory
 	}
 	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
@@ -49,4 +54,4 @@ func load_data() -> void:
 		if typeof(result) == TYPE_DICTIONARY:
 			coins = result.get("coins", 0)
 			gems = result.get("gems", 0)
-			player_name = result.get("name", "")
+			food_inventory = result.get("food", food_inventory)

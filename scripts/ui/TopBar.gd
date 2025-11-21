@@ -1,6 +1,5 @@
 extends Control
 
-
 @onready var coinlabel: Label = $coinlabel
 @onready var gemlabel: Label = $gemlabel
 @onready var settings_menu: MenuButton = $settingoutline/SettingsMenu
