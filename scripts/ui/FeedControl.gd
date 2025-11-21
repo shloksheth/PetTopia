@@ -21,7 +21,7 @@ func _update_food_list(food: Dictionary) -> void:
 		var count: int = food[item]
 		var btn := Button.new()
 		btn.text = "%s (%d left)" % [item, count]
-		btn.pressed.connect(func(): _on_food_selected(item))
+		btn.pressed.connect(func(	): _on_food_selected(item))
 		food_list.add_child(btn)
 
 func _on_food_selected(item: String) -> void:

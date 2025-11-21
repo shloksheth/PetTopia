@@ -22,8 +22,8 @@ Global="*res://scripts/systems/Global.gd"
 
 [display]
 
-window/size/viewport_width=702
-window/size/viewport_height=1064
+window/size/viewport_width=720
+window/size/viewport_height=1280
 window/stretch/mode="viewport"
 window/handheld/orientation=1
 

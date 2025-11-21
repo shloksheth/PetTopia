@@ -16,8 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://k7xgjpl4wmrh" path="res://assets/sprites/pets/idle dog animation/idle 6.png" id="13_yikgj"]
 [ext_resource type="Texture2D" uid="uid://xke0ynkxnloy" path="res://assets/sprites/pets/idle dog animation/idle 7.png" id="14_xaqj1"]
 [ext_resource type="Script" uid="uid://dv2delyhry6hg" path="res://scripts/ui/HelpPopup.gd" id="15_qnf6t"]
-[ext_resource type="Script" uid="uid://bo4u6k2st5nvf" path="res://scripts/ui/testbutton.gd" id="17_esm83"]
 [ext_resource type="Script" uid="uid://dbsbbw0s4tvl4" path="res://scripts/ui/FeedControl.gd" id="18_vub6t"]
+[ext_resource type="Script" uid="uid://b3piefjomrf34" path="res://scripts/ui/quickshop.gd" id="19_yikgj"]
 
 [sub_resource type="SystemFont" id="SystemFont_kccng"]
 
@@ -227,7 +227,7 @@ script = ExtResource("8_a7whw")
 position = Vector2(360, 700)
 sprite_frames = SubResource("SpriteFrames_7yxrd")
 animation = &"idle"
-frame_progress = 0.5778234
+frame_progress = 0.45430404
 
 [node name="PetNameLabel" type="RichTextLabel" parent="Home Control/PetAreaControl"]
 layout_mode = 0
@@ -334,15 +334,6 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4jx0l")
 text = "Close"
 
-[node name="testbutton" type="Button" parent="Home Control"]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 896.0
-offset_right = 129.0
-offset_bottom = 954.0
-text = "test"
-script = ExtResource("17_esm83")
-
 [node name="FeedControl" type="Control" parent="Home Control"]
 anchors_preset = 0
 offset_left = 8.0
@@ -364,5 +355,60 @@ text = "🍖"
 [node name="FoodPopup" type="PopupPanel" parent="Home Control/FeedControl"]
 
 [node name="FoodList" type="VBoxContainer" parent="Home Control/FeedControl/FoodPopup"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HungerBar" type="ProgressBar" parent="Home Control"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 553.0
+offset_right = 590.0
+offset_bottom = 591.0
+value = 50.0
+
+[node name="Label" type="Label" parent="Home Control"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 511.0
+offset_right = 613.0
+offset_bottom = 553.0
+theme_override_font_sizes/font_size = 30
+text = "Hunger Bar"
+
+[node name="EnergyBar" type="ProgressBar" parent="Home Control"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 464.0
+offset_right = 590.0
+offset_bottom = 511.0
+value = 50.0
+
+[node name="Label2" type="Label" parent="Home Control"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 415.0
+offset_right = 613.0
+offset_bottom = 553.0
+theme_override_font_sizes/font_size = 30
+text = "Energy Bar"
+
+[node name="ShopControl" type="Control" parent="Home Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("19_yikgj")
+
+[node name="QuickShopButton" type="Button" parent="Home Control/ShopControl"]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 1070.0
+offset_right = 590.0
+offset_bottom = 1190.0
+theme_override_font_sizes/font_size = 48
+text = "🏪"
+
+[node name="QuickShopPopup" type="PopupPanel" parent="Home Control/ShopControl"]
+
+[node name="ShopList" type="VBoxContainer" parent="Home Control/ShopControl/QuickShopPopup"]
 offset_right = 40.0
 offset_bottom = 40.0
