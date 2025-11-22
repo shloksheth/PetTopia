@@ -116,6 +116,7 @@ texture = ExtResource("2_ty1ao")
 
 [node name="Top Bar" type="Control" parent="Home Control"]
 layout_mode = 1
+anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 80.0
 script = ExtResource("3_4jx0l")
@@ -355,8 +356,10 @@ text = "🍖"
 [node name="FoodPopup" type="PopupPanel" parent="Home Control/FeedControl"]
 
 [node name="FoodList" type="VBoxContainer" parent="Home Control/FeedControl/FoodPopup"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 96.0
 
 [node name="HungerBar" type="ProgressBar" parent="Home Control"]
 layout_mode = 0
@@ -410,5 +413,7 @@ text = "🏪"
 [node name="QuickShopPopup" type="PopupPanel" parent="Home Control/ShopControl"]
 
 [node name="ShopList" type="VBoxContainer" parent="Home Control/ShopControl/QuickShopPopup"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 96.0

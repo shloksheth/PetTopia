@@ -40,8 +40,11 @@ func consume_food(item: String) -> void:
 	if food_inventory.has(item) and food_inventory[item] > 0:
 		food_inventory[item] -= 1
 		# Eating restores hunger and energy
+		print("After eating:", hunger, energy)
 		hunger = clamp(hunger + 10, 0, 100)
 		energy = clamp(energy + 5, 0, 100)
+		print("Types:", typeof(hunger), typeof(energy))
+
 		food_changed.emit(food_inventory)
 		stats_updated.emit()
 		save_data()
