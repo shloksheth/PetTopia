@@ -1,21 +1,12 @@
-[gd_scene load_steps=29 format=3 uid="uid://b2axg646u8arg"]
+[gd_scene load_steps=26 format=3 uid="uid://b2axg646u8arg"]
 
 [ext_resource type="Texture2D" uid="uid://blriolc4stkmk" path="res://assets/backgrounds/shop_background.jpeg" id="1_lx5au"]
 [ext_resource type="Script" uid="uid://c80l5vwb0i1bu" path="res://scripts/shop.gd" id="1_y6sft"]
-[ext_resource type="Texture2D" uid="uid://bcbymyjb51042" path="res://assets/ui/gold_coins_and_gems_without_bg.png" id="2_8r1wq"]
 [ext_resource type="Texture2D" uid="uid://cuqyrceyfn1wo" path="res://assets/ui/apple_without_bg.png" id="3_ajxib"]
 [ext_resource type="Texture2D" uid="uid://dtesloctqn6le" path="res://assets/ui/coin_icon.png" id="4_ajxib"]
 [ext_resource type="Texture2D" uid="uid://bfpgd8von8yir" path="res://assets/ui/pizza_without_bg.png" id="4_y6sft"]
 [ext_resource type="Texture2D" uid="uid://nclya28flppu" path="res://assets/ui/meat_without_bg.png" id="5_m4ofw"]
 [ext_resource type="Texture2D" uid="uid://dh71uccg53yt6" path="res://assets/ui/fish_without_bg.png" id="6_heatd"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1v8qu"]
-atlas = ExtResource("2_8r1wq")
-region = Rect2(39.644814, 16.263187, 221.68436, 81.51497)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8r1wq"]
-atlas = ExtResource("2_8r1wq")
-region = Rect2(288.579, 115.42111, 210.39487, 77.189026)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajxib"]
 bg_color = Color(1, 0.64705884, 0, 1)
@@ -87,54 +78,6 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource("1_lx5au")
-
-[node name="Stats" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="CoinBar" type="TextureRect" parent="Stats"]
-layout_mode = 1
-offset_left = 23.0
-offset_top = 3.0
-offset_right = 206.0
-offset_bottom = 58.0
-texture = SubResource("AtlasTexture_1v8qu")
-expand_mode = 1
-
-[node name="CoinLabel" type="Label" parent="Stats/CoinBar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.35500002
-anchor_top = 0.30900002
-anchor_right = 0.874
-anchor_bottom = 0.72700006
-offset_left = 0.034996033
-offset_top = 0.0049991608
-offset_right = 0.057998657
-offset_bottom = 0.014995575
-text = "50"
-
-[node name="GemBar" type="TextureRect" parent="Stats"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 5.0
-anchor_right = 9.375
-anchor_bottom = 1.4000001
-offset_top = 4.0
-texture = SubResource("AtlasTexture_8r1wq")
-expand_mode = 1
-
-[node name="GemLabel" type="Label" parent="Stats/GemBar"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.36
-anchor_top = 0.30800003
-anchor_right = 0.90900004
-anchor_bottom = 0.75000006
-offset_top = -0.016000748
-offset_right = -0.07501221
-text = "50"
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1

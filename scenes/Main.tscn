@@ -1,0 +1,212 @@
+[gd_scene load_steps=11 format=3 uid="uid://5ihd3ene4jrf"]
+
+[ext_resource type="Script" uid="uid://3y2toj4xr4gp" path="res://scenes/main.gd" id="1_jlsqs"]
+[ext_resource type="Script" uid="uid://jqfhqqk2mv15" path="res://scripts/ui/TopBar.gd" id="2_q8u5g"]
+[ext_resource type="Texture2D" uid="uid://dmygidwi4s0o7" path="res://assets/icons/button.png" id="3_lhr70"]
+[ext_resource type="Texture2D" uid="uid://bpsobsvaeoiip" path="res://assets/icons/gold coin.png" id="4_wp0k4"]
+[ext_resource type="Texture2D" uid="uid://cj6vtkyan2njc" path="res://assets/icons/gems.png" id="5_bjd11"]
+[ext_resource type="Texture2D" uid="uid://deeta1mjbu0x0" path="res://assets/icons/orange square.png" id="6_qmy6f"]
+[ext_resource type="Script" uid="uid://be4frm6wcyg0a" path="res://scripts/ui/SettingsPopup.gd" id="7_mwfav"]
+[ext_resource type="Script" uid="uid://dv2delyhry6hg" path="res://scripts/ui/HelpPopup.gd" id="8_3p2gp"]
+
+[sub_resource type="SystemFont" id="SystemFont_nxtc6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jlsqs"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jlsqs")
+
+[node name="TopBar" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+script = ExtResource("2_q8u5g")
+
+[node name="coin bg" type="TextureRect" parent="TopBar"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -75.0
+offset_right = 236.0
+offset_bottom = 160.0
+texture = ExtResource("3_lhr70")
+expand_mode = 1
+
+[node name="Coin" type="NinePatchRect" parent="TopBar"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 19.0
+offset_right = 74.0
+offset_bottom = 59.0
+texture = ExtResource("4_wp0k4")
+
+[node name="gem bg" type="TextureRect" parent="TopBar"]
+layout_mode = 0
+offset_left = 226.0
+offset_top = -75.0
+offset_right = 431.0
+offset_bottom = 160.0
+texture = ExtResource("3_lhr70")
+expand_mode = 1
+
+[node name="Gem" type="NinePatchRect" parent="TopBar"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 11.0
+offset_right = 307.0
+offset_bottom = 68.0
+texture = ExtResource("5_bjd11")
+
+[node name="settingoutline" type="NinePatchRect" parent="TopBar"]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 6.0
+offset_right = 590.0
+offset_bottom = 78.0
+texture = ExtResource("6_qmy6f")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="SettingsMenu" type="MenuButton" parent="TopBar/settingoutline"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.058000002
+anchor_top = 0.083000004
+anchor_right = 0.90400004
+anchor_bottom = 0.9110001
+offset_left = -13.292
+offset_top = -8.976
+offset_right = 16.103996
+offset_bottom = 19.407997
+theme_override_font_sizes/font_size = 51
+text = "⚙️"
+
+[node name="orange button3" type="NinePatchRect" parent="TopBar"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 6.0
+offset_right = 668.0
+offset_bottom = 78.0
+texture = ExtResource("6_qmy6f")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="coinlabel" type="Label" parent="TopBar"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 25.0
+offset_right = 202.0
+offset_bottom = 57.0
+theme_override_fonts/font = SubResource("SystemFont_nxtc6")
+theme_override_font_sizes/font_size = 23
+text = "0"
+
+[node name="gemlabel" type="Label" parent="TopBar"]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 25.0
+offset_right = 397.0
+offset_bottom = 57.0
+theme_override_fonts/font = SubResource("SystemFont_nxtc6")
+theme_override_font_sizes/font_size = 23
+text = "o"
+
+[node name="SettingsPopup" type="PopupPanel" parent="."]
+oversampling_override = 1.0
+position = Vector2i(60, 200)
+size = Vector2i(600, 900)
+max_size = Vector2i(16384, 900)
+script = ExtResource("7_mwfav")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 596.0
+offset_bottom = 896.0
+
+[node name="settingsheader" type="Label" parent="SettingsPopup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 80
+text = "Settings"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPopup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="volumesubheader" type="Label" parent="SettingsPopup/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Volume:"
+
+[node name="VolumeSlider" type="HSlider" parent="SettingsPopup/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+value = 50.0
+
+[node name="CloseButton" type="Button" parent="SettingsPopup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jlsqs")
+text = "Close"
+
+[node name="HelpPopup" type="PopupPanel" parent="."]
+oversampling_override = 1.0
+position = Vector2i(60, 0)
+size = Vector2i(1140, 900)
+max_size = Vector2i(16384, 900)
+script = ExtResource("8_3p2gp")
+
+[node name="MarginContainer" type="MarginContainer" parent="HelpPopup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 1136.0
+offset_bottom = 896.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HelpPopup/MarginContainer"]
+custom_minimum_size = Vector2(0, 800)
+layout_mode = 2
+
+[node name="helpheader" type="Label" parent="HelpPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 80
+text = "Help"
+
+[node name="Label" type="Label" parent="HelpPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 18
+text = "This is your help information"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="HelpPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jlsqs")
+text = "Close"
+
+[node name="ScreenContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
