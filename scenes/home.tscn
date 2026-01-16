@@ -1,36 +1,36 @@
-[gd_scene load_steps=41 format=3 uid="uid://buaim4mku5vl2"]
+[gd_scene load_steps=41 format=3 uid="uid://bhlsiljqqxsdn"]
 
-[ext_resource type="Texture2D" uid="uid://pa818wd6l3wg" path="res://assets/backgrounds/backgroundhomescreen3.png" id="1_ty1ao"]
-[ext_resource type="Texture2D" uid="uid://d3oqx8jsaacei" path="res://assets/icons/Screenshot 2025-11-20 202636.png" id="2_ty1ao"]
-[ext_resource type="Script" uid="uid://jqfhqqk2mv15" path="res://scripts/ui/TopBar.gd" id="3_4jx0l"]
-[ext_resource type="Texture2D" uid="uid://dmygidwi4s0o7" path="res://assets/icons/button.png" id="3_57c6s"]
-[ext_resource type="Texture2D" uid="uid://bpsobsvaeoiip" path="res://assets/icons/gold coin.png" id="4_ty1ao"]
-[ext_resource type="Texture2D" uid="uid://cj6vtkyan2njc" path="res://assets/icons/gems.png" id="5_0kdue"]
-[ext_resource type="Texture2D" uid="uid://deeta1mjbu0x0" path="res://assets/icons/orange square.png" id="6_bbp0q"]
-[ext_resource type="Script" uid="uid://be4frm6wcyg0a" path="res://scripts/ui/SettingsPopup.gd" id="7_hsodw"]
-[ext_resource type="Script" uid="uid://b0ognybs14qxr" path="res://scripts/ui/PetAreaControl.gd" id="8_a7whw"]
-[ext_resource type="Texture2D" uid="uid://d2xlckiyekodv" path="res://assets/sprites/dog_animation/idle 1.png" id="9_roh6j"]
-[ext_resource type="Texture2D" uid="uid://c7kimjybao6ia" path="res://assets/sprites/dog_animation/idle 6.png" id="10_js3mc"]
-[ext_resource type="Texture2D" uid="uid://dio6g0ommegn5" path="res://assets/sprites/dog_animation/idle 3.png" id="11_ai5qb"]
-[ext_resource type="Texture2D" uid="uid://biagfmbemgchk" path="res://assets/sprites/dog_animation/idle 2.png" id="12_lqk23"]
-[ext_resource type="Texture2D" uid="uid://wqiwxo5rvjw0" path="res://assets/sprites/dog_animation/idle 4.png" id="13_5cp3b"]
-[ext_resource type="Texture2D" uid="uid://5qcet5dkjv" path="res://assets/sprites/dog_animation/idle 10.png" id="14_478mm"]
-[ext_resource type="Texture2D" uid="uid://joom7lwebguo" path="res://assets/sprites/dog_animation/idle 5.png" id="15_mirar"]
-[ext_resource type="Script" uid="uid://dv2delyhry6hg" path="res://scripts/ui/HelpPopup.gd" id="15_qnf6t"]
-[ext_resource type="Texture2D" uid="uid://5fle5cfrpi4r" path="res://assets/sprites/dog_animation/idle 14.png" id="16_7ovmh"]
-[ext_resource type="Texture2D" uid="uid://y4d1k02w58p8" path="res://assets/sprites/dog_animation/idle 9.png" id="17_g31ly"]
-[ext_resource type="Texture2D" uid="uid://b1i7dxem0iyt6" path="res://assets/sprites/dog_animation/idle 17.png" id="18_42v5f"]
-[ext_resource type="Script" uid="uid://dbsbbw0s4tvl4" path="res://scripts/ui/FeedControl.gd" id="18_vub6t"]
-[ext_resource type="Texture2D" uid="uid://ddoghhjl4d8e4" path="res://assets/sprites/dog_animation/idle 11.png" id="19_bdsga"]
-[ext_resource type="Texture2D" uid="uid://cjexg8uiyn5j7" path="res://assets/sprites/dog_animation/idle 19.png" id="20_d72jo"]
-[ext_resource type="Texture2D" uid="uid://cvg8v2jrs1war" path="res://assets/sprites/dog_animation/idle 12.png" id="21_piu6s"]
-[ext_resource type="Texture2D" uid="uid://cf4tic2l3tusg" path="res://assets/sprites/dog_animation/idle 18.png" id="22_clcke"]
-[ext_resource type="Texture2D" uid="uid://bc7pq5t8jkylc" path="res://assets/sprites/dog_animation/idle 13.png" id="23_ivny5"]
-[ext_resource type="Script" uid="uid://c61orpfqcyo3l" path="res://scripts/animated_sprite_2d.gd" id="24_cl5sq"]
-[ext_resource type="Texture2D" uid="uid://c4qll4r72f315" path="res://assets/ui/hunger_energy_bars_with_bg.png" id="29_2qans"]
-[ext_resource type="Texture2D" uid="uid://dprhm85rwdg0n" path="res://assets/ui/hunger_energy_bars_without_bg.png" id="30_n3beq"]
-[ext_resource type="Script" uid="uid://c2ivmpddcw628" path="res://scripts/hunger_bar.gd" id="31_6jvfo"]
-[ext_resource type="Script" uid="uid://bev8ipxalx5v2" path="res://scripts/energy_bar.gd" id="32_3tkfy"]
+[ext_resource type="Texture2D" uid="uid://pa818wd6l3wg" path="res://assets/backgrounds/backgroundhomescreen3.png" id="1_tfofk"]
+[ext_resource type="Texture2D" uid="uid://d3oqx8jsaacei" path="res://assets/icons/Screenshot 2025-11-20 202636.png" id="2_pkfi5"]
+[ext_resource type="Script" uid="uid://jqfhqqk2mv15" path="res://scripts/ui/TopBar.gd" id="3_hgame"]
+[ext_resource type="Texture2D" uid="uid://dmygidwi4s0o7" path="res://assets/icons/button.png" id="4_h82vl"]
+[ext_resource type="Texture2D" uid="uid://bpsobsvaeoiip" path="res://assets/icons/gold coin.png" id="5_gqdsy"]
+[ext_resource type="Texture2D" uid="uid://cj6vtkyan2njc" path="res://assets/icons/gems.png" id="6_ycapa"]
+[ext_resource type="Texture2D" uid="uid://deeta1mjbu0x0" path="res://assets/icons/orange square.png" id="7_rh63h"]
+[ext_resource type="Script" uid="uid://b0ognybs14qxr" path="res://scripts/ui/PetAreaControl.gd" id="8_gdnlb"]
+[ext_resource type="Texture2D" uid="uid://d2xlckiyekodv" path="res://assets/sprites/dog_animation/idle 1.png" id="9_ito08"]
+[ext_resource type="Texture2D" uid="uid://c7kimjybao6ia" path="res://assets/sprites/dog_animation/idle 6.png" id="10_xqnw7"]
+[ext_resource type="Texture2D" uid="uid://dio6g0ommegn5" path="res://assets/sprites/dog_animation/idle 3.png" id="11_64kf6"]
+[ext_resource type="Texture2D" uid="uid://biagfmbemgchk" path="res://assets/sprites/dog_animation/idle 2.png" id="12_14mn0"]
+[ext_resource type="Texture2D" uid="uid://wqiwxo5rvjw0" path="res://assets/sprites/dog_animation/idle 4.png" id="13_h2448"]
+[ext_resource type="Texture2D" uid="uid://5qcet5dkjv" path="res://assets/sprites/dog_animation/idle 10.png" id="14_wccd7"]
+[ext_resource type="Texture2D" uid="uid://joom7lwebguo" path="res://assets/sprites/dog_animation/idle 5.png" id="15_cykk0"]
+[ext_resource type="Texture2D" uid="uid://5fle5cfrpi4r" path="res://assets/sprites/dog_animation/idle 14.png" id="16_i6y7i"]
+[ext_resource type="Texture2D" uid="uid://y4d1k02w58p8" path="res://assets/sprites/dog_animation/idle 9.png" id="17_1p5pb"]
+[ext_resource type="Texture2D" uid="uid://b1i7dxem0iyt6" path="res://assets/sprites/dog_animation/idle 17.png" id="18_std3t"]
+[ext_resource type="Texture2D" uid="uid://ddoghhjl4d8e4" path="res://assets/sprites/dog_animation/idle 11.png" id="19_ne40x"]
+[ext_resource type="Texture2D" uid="uid://cjexg8uiyn5j7" path="res://assets/sprites/dog_animation/idle 19.png" id="20_uyfor"]
+[ext_resource type="Texture2D" uid="uid://cvg8v2jrs1war" path="res://assets/sprites/dog_animation/idle 12.png" id="21_1p8ht"]
+[ext_resource type="Texture2D" uid="uid://cf4tic2l3tusg" path="res://assets/sprites/dog_animation/idle 18.png" id="22_5rik2"]
+[ext_resource type="Texture2D" uid="uid://bc7pq5t8jkylc" path="res://assets/sprites/dog_animation/idle 13.png" id="23_5t3i5"]
+[ext_resource type="Script" uid="uid://c61orpfqcyo3l" path="res://scripts/animated_sprite_2d.gd" id="24_mvo7n"]
+[ext_resource type="Script" uid="uid://be4frm6wcyg0a" path="res://scripts/ui/SettingsPopup.gd" id="25_w0c6f"]
+[ext_resource type="Script" uid="uid://dv2delyhry6hg" path="res://scripts/ui/HelpPopup.gd" id="26_ho3mt"]
+[ext_resource type="Script" uid="uid://dbsbbw0s4tvl4" path="res://scripts/ui/FeedControl.gd" id="27_g6at4"]
+[ext_resource type="Texture2D" uid="uid://c4qll4r72f315" path="res://assets/ui/hunger_energy_bars_with_bg.png" id="28_igl4f"]
+[ext_resource type="Texture2D" uid="uid://dprhm85rwdg0n" path="res://assets/ui/hunger_energy_bars_without_bg.png" id="29_bjsxs"]
+[ext_resource type="Script" uid="uid://c2ivmpddcw628" path="res://scripts/hunger_bar.gd" id="30_0clja"]
+[ext_resource type="Script" uid="uid://bev8ipxalx5v2" path="res://scripts/energy_bar.gd" id="31_xkxo8"]
 
 [sub_resource type="SystemFont" id="SystemFont_kccng"]
 
@@ -38,49 +38,49 @@
 animations = [{
 "frames": [{
 "duration": 4.0,
-"texture": ExtResource("9_roh6j")
+"texture": ExtResource("9_ito08")
 }, {
 "duration": 1.5,
-"texture": ExtResource("10_js3mc")
+"texture": ExtResource("10_xqnw7")
 }, {
 "duration": 4.0,
-"texture": ExtResource("11_ai5qb")
+"texture": ExtResource("11_64kf6")
 }, {
 "duration": 1.5,
-"texture": ExtResource("12_lqk23")
+"texture": ExtResource("12_14mn0")
 }, {
 "duration": 4.0,
-"texture": ExtResource("13_5cp3b")
+"texture": ExtResource("13_h2448")
 }, {
 "duration": 1.5,
-"texture": ExtResource("14_478mm")
+"texture": ExtResource("14_wccd7")
 }, {
 "duration": 4.0,
-"texture": ExtResource("15_mirar")
+"texture": ExtResource("15_cykk0")
 }, {
 "duration": 1.5,
-"texture": ExtResource("16_7ovmh")
+"texture": ExtResource("16_i6y7i")
 }, {
 "duration": 4.0,
-"texture": ExtResource("17_g31ly")
+"texture": ExtResource("17_1p5pb")
 }, {
 "duration": 1.5,
-"texture": ExtResource("18_42v5f")
+"texture": ExtResource("18_std3t")
 }, {
 "duration": 4.0,
-"texture": ExtResource("19_bdsga")
+"texture": ExtResource("19_ne40x")
 }, {
 "duration": 1.5,
-"texture": ExtResource("20_d72jo")
+"texture": ExtResource("20_uyfor")
 }, {
 "duration": 4.0,
-"texture": ExtResource("21_piu6s")
+"texture": ExtResource("21_1p8ht")
 }, {
 "duration": 1.5,
-"texture": ExtResource("22_clcke")
+"texture": ExtResource("22_5rik2")
 }, {
 "duration": 4.0,
-"texture": ExtResource("23_ivny5")
+"texture": ExtResource("23_5t3i5")
 }],
 "loop": true,
 "name": &"idle",
@@ -96,35 +96,36 @@ bg_color = Color(0.99215686, 0.6431373, 0.58431375, 1)
 bg_color = Color(0.11764706, 0.7254902, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uc30e"]
-atlas = ExtResource("29_2qans")
+atlas = ExtResource("28_igl4f")
 region = Rect2(195.00494, 1.9675827, 483.15326, 103.92984)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5cuaw"]
-atlas = ExtResource("30_n3beq")
+atlas = ExtResource("29_bjsxs")
 region = Rect2(36.624084, 194.69385, 414.748, 113.223175)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u44bh"]
-atlas = ExtResource("29_2qans")
+atlas = ExtResource("28_igl4f")
 region = Rect2(218.73035, -36.767036, 411.17944, 140.30768)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ylsw0"]
-atlas = ExtResource("30_n3beq")
+atlas = ExtResource("29_bjsxs")
 region = Rect2(42.986755, 319.668, 425.93924, 146.556)
 
-[node name="Home" type="Node2D"]
+[node name="Home2" type="Node2D"]
 
 [node name="Home Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-grow_horizontal = 0
+anchors_preset = 0
+offset_left = 35.0
+offset_right = 755.0
+offset_bottom = 1280.0
+metadata/_edit_group_ = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Home Control"]
 layout_mode = 0
 offset_right = 720.0
 offset_bottom = 1280.0
-texture = ExtResource("1_ty1ao")
+texture = ExtResource("1_tfofk")
 patch_margin_left = 3
 patch_margin_top = 3
 patch_margin_right = 3
@@ -136,7 +137,7 @@ anchors_preset = -1
 offset_right = 480.0
 offset_bottom = 853.3334
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("2_ty1ao")
+texture = ExtResource("2_pkfi5")
 
 [node name="Top Bar" type="Control" parent="Home Control"]
 layout_mode = 1
@@ -144,7 +145,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 80.0
 grow_horizontal = 2
-script = ExtResource("3_4jx0l")
+script = ExtResource("3_hgame")
 
 [node name="coin bg" type="TextureRect" parent="Home Control/Top Bar"]
 layout_mode = 0
@@ -152,7 +153,7 @@ offset_left = 8.0
 offset_top = -75.0
 offset_right = 236.0
 offset_bottom = 160.0
-texture = ExtResource("3_57c6s")
+texture = ExtResource("4_h82vl")
 expand_mode = 1
 
 [node name="Coin" type="NinePatchRect" parent="Home Control/Top Bar"]
@@ -161,7 +162,7 @@ offset_left = 35.0
 offset_top = 19.0
 offset_right = 74.0
 offset_bottom = 59.0
-texture = ExtResource("4_ty1ao")
+texture = ExtResource("5_gqdsy")
 
 [node name="gem bg" type="TextureRect" parent="Home Control/Top Bar"]
 layout_mode = 0
@@ -169,7 +170,7 @@ offset_left = 226.0
 offset_top = -75.0
 offset_right = 431.0
 offset_bottom = 160.0
-texture = ExtResource("3_57c6s")
+texture = ExtResource("4_h82vl")
 expand_mode = 1
 
 [node name="Gem" type="NinePatchRect" parent="Home Control/Top Bar"]
@@ -178,7 +179,7 @@ offset_left = 236.0
 offset_top = 11.0
 offset_right = 307.0
 offset_bottom = 68.0
-texture = ExtResource("5_0kdue")
+texture = ExtResource("6_ycapa")
 
 [node name="settingoutline" type="NinePatchRect" parent="Home Control/Top Bar"]
 layout_mode = 0
@@ -186,7 +187,7 @@ offset_left = 516.0
 offset_top = 6.0
 offset_right = 590.0
 offset_bottom = 78.0
-texture = ExtResource("6_bbp0q")
+texture = ExtResource("7_rh63h")
 patch_margin_left = 3
 patch_margin_top = 3
 patch_margin_right = 3
@@ -212,7 +213,7 @@ offset_left = 594.0
 offset_top = 6.0
 offset_right = 668.0
 offset_bottom = 78.0
-texture = ExtResource("6_bbp0q")
+texture = ExtResource("7_rh63h")
 patch_margin_left = 3
 patch_margin_top = 3
 patch_margin_right = 3
@@ -247,14 +248,14 @@ offset_top = 141.0
 offset_bottom = -326.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("8_a7whw")
+script = ExtResource("8_gdnlb")
 
 [node name="PetNameLabel" type="RichTextLabel" parent="Home Control/PetAreaControl"]
 layout_mode = 0
-offset_left = 108.0
-offset_top = 206.5
-offset_right = 600.0
-offset_bottom = 259.5
+offset_left = 129.0
+offset_top = -34.0
+offset_right = 621.0
+offset_bottom = 19.0
 theme_override_font_sizes/normal_font_size = 37
 theme_override_font_sizes/bold_font_size = 37
 text = "fluffy"
@@ -263,10 +264,10 @@ horizontal_alignment = 1
 
 [node name="RenameButton" type="Button" parent="Home Control/PetAreaControl"]
 layout_mode = 0
-offset_left = 569.0
-offset_top = 206.5
-offset_right = 631.0
-offset_bottom = 268.5
+offset_left = 590.0
+offset_top = -34.0
+offset_right = 652.0
+offset_bottom = 28.0
 theme_override_font_sizes/font_size = 39
 text = "🏷️"
 
@@ -275,14 +276,14 @@ position = Vector2(359, 738)
 scale = Vector2(0.75, 0.818)
 sprite_frames = SubResource("SpriteFrames_x34j0")
 animation = &"idle"
-script = ExtResource("24_cl5sq")
+script = ExtResource("24_mvo7n")
 
 [node name="SettingsPopup" type="PopupPanel" parent="Home Control"]
 oversampling_override = 1.0
 position = Vector2i(60, 200)
 size = Vector2i(600, 900)
 max_size = Vector2i(16384, 900)
-script = ExtResource("7_hsodw")
+script = ExtResource("25_w0c6f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Home Control/SettingsPopup"]
 offset_left = 4.0
@@ -323,7 +324,7 @@ oversampling_override = 1.0
 position = Vector2i(60, 0)
 size = Vector2i(1140, 900)
 max_size = Vector2i(16384, 900)
-script = ExtResource("15_qnf6t")
+script = ExtResource("26_ho3mt")
 
 [node name="MarginContainer" type="MarginContainer" parent="Home Control/Help Popup"]
 anchors_preset = 15
@@ -367,7 +368,7 @@ offset_left = 8.0
 offset_top = 1070.0
 offset_right = 719.0
 offset_bottom = 1190.0
-script = ExtResource("18_vub6t")
+script = ExtResource("27_g6at4")
 
 [node name="FoodButton" type="Button" parent="Home Control/FeedControl"]
 layout_mode = 0
@@ -380,7 +381,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vub6t")
 text = "🍖"
 
 [node name="FoodPopup" type="PopupPanel" parent="Home Control/FeedControl"]
-oversampling_override = 1.0
 
 [node name="FoodList" type="VBoxContainer" parent="Home Control/FeedControl/FoodPopup"]
 offset_left = 4.0
@@ -418,15 +418,19 @@ value = 100.0
 nine_patch_stretch = true
 texture_under = SubResource("AtlasTexture_uc30e")
 texture_progress = SubResource("AtlasTexture_5cuaw")
-script = ExtResource("31_6jvfo")
+script = ExtResource("30_0clja")
 
 [node name="HungerLabel" type="Label" parent="Home Control/HungerBar"]
 layout_mode = 1
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = -1
+anchor_right = 1.0580001
+anchor_bottom = 0.5
+offset_left = 86.0
+offset_top = -4.0
+offset_right = -60.672012
+offset_bottom = -13.0
 theme_override_font_sizes/font_size = 16
 text = "100"
-metadata/_edit_use_anchors_ = true
 
 [node name="EnergyBar" type="TextureProgressBar" parent="Home Control"]
 layout_mode = 0
@@ -438,7 +442,7 @@ scale = Vector2(0.45, 0.45)
 value = 100.0
 texture_under = SubResource("AtlasTexture_u44bh")
 texture_progress = SubResource("AtlasTexture_ylsw0")
-script = ExtResource("32_3tkfy")
+script = ExtResource("31_xkxo8")
 
 [node name="EnergyLabel" type="Label" parent="Home Control/EnergyBar"]
 layout_mode = 1

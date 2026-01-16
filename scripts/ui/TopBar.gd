@@ -36,3 +36,7 @@ func _on_menu_item_pressed(id: int) -> void:
 			help_popup.popup_centered(Vector2i(600, 320))
 		2:
 			get_tree().quit()
+
+
+func _on_shop_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/shop/shop.tscn")
