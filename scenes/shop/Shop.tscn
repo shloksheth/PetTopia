@@ -78,6 +78,7 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource("1_lx5au")
+expand_mode = 1
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
@@ -327,10 +328,10 @@ theme_override_font_sizes/font_size = 30
 
 [node name="HomeButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 567.0
-offset_top = 707.0
-offset_right = 674.0
-offset_bottom = 788.0
+offset_left = 573.0
+offset_top = 747.0
+offset_right = 680.0
+offset_bottom = 828.0
 theme_override_font_sizes/font_size = 30
 theme_override_styles/pressed = SubResource("StyleBoxFlat_yuijs")
 text = "HOME"

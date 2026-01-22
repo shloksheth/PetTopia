@@ -26,11 +26,11 @@
 [ext_resource type="Texture2D" uid="uid://cvg8v2jrs1war" path="res://assets/sprites/dog_animation/idle 12.png" id="21_piu6s"]
 [ext_resource type="Texture2D" uid="uid://cf4tic2l3tusg" path="res://assets/sprites/dog_animation/idle 18.png" id="22_clcke"]
 [ext_resource type="Texture2D" uid="uid://bc7pq5t8jkylc" path="res://assets/sprites/dog_animation/idle 13.png" id="23_ivny5"]
-[ext_resource type="Script" uid="uid://c61orpfqcyo3l" path="res://scripts/animated_sprite_2d.gd" id="24_cl5sq"]
+[ext_resource type="Script" path="res://scripts/animated_sprite_2d.gd" id="24_cl5sq"]
 [ext_resource type="Texture2D" uid="uid://c4qll4r72f315" path="res://assets/ui/hunger_energy_bars_with_bg.png" id="29_2qans"]
 [ext_resource type="Texture2D" uid="uid://dprhm85rwdg0n" path="res://assets/ui/hunger_energy_bars_without_bg.png" id="30_n3beq"]
-[ext_resource type="Script" uid="uid://c2ivmpddcw628" path="res://scripts/hunger_bar.gd" id="31_6jvfo"]
-[ext_resource type="Script" uid="uid://bev8ipxalx5v2" path="res://scripts/energy_bar.gd" id="32_3tkfy"]
+[ext_resource type="Script" path="res://scripts/hunger_bar.gd" id="31_6jvfo"]
+[ext_resource type="Script" path="res://scripts/energy_bar.gd" id="32_3tkfy"]
 [ext_resource type="Script" uid="uid://bl42w28o5knmy" path="res://scenes/home/tempcoinbutton.gd" id="32_roh6j"]
 
 [sub_resource type="SystemFont" id="SystemFont_roh6j"]
@@ -129,8 +129,8 @@ grow_horizontal = 0
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Home Control"]
 layout_mode = 0
-offset_right = 720.0
-offset_bottom = 1280.0
+offset_left = -800.0
+offset_bottom = 900.0
 texture = ExtResource("1_ty1ao")
 patch_margin_left = 3
 patch_margin_top = 3
@@ -155,44 +155,44 @@ script = ExtResource("3_4jx0l")
 
 [node name="coin bg" type="TextureRect" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_left = 8.0
-offset_top = -75.0
-offset_right = 236.0
-offset_bottom = 160.0
+offset_left = -788.0
+offset_top = -85.0
+offset_right = -615.0
+offset_bottom = 150.0
 texture = ExtResource("3_57c6s")
 expand_mode = 1
 
 [node name="Coin" type="NinePatchRect" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 19.0
-offset_right = 74.0
-offset_bottom = 59.0
+offset_left = -767.0
+offset_top = 9.0
+offset_right = -728.0
+offset_bottom = 49.0
 texture = ExtResource("4_ty1ao")
 
 [node name="gem bg" type="TextureRect" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_left = 226.0
-offset_top = -75.0
-offset_right = 431.0
-offset_bottom = 160.0
+offset_left = -629.0
+offset_top = -84.0
+offset_right = -449.0
+offset_bottom = 151.0
 texture = ExtResource("3_57c6s")
 expand_mode = 1
 
 [node name="Gem" type="NinePatchRect" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_left = 236.0
-offset_top = 11.0
-offset_right = 307.0
-offset_bottom = 68.0
+offset_left = -625.0
+offset_top = 1.0
+offset_right = -554.0
+offset_bottom = 58.0
 texture = ExtResource("5_0kdue")
 
 [node name="settingoutline" type="NinePatchRect" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_left = 516.0
-offset_top = 6.0
-offset_right = 590.0
-offset_bottom = 78.0
+offset_left = -155.0
+offset_top = 1.0
+offset_right = -91.0
+offset_bottom = 61.0
 texture = ExtResource("6_bbp0q")
 patch_margin_left = 3
 patch_margin_top = 3
@@ -206,19 +206,18 @@ anchor_left = 0.058000002
 anchor_top = 0.083000004
 anchor_right = 0.90400004
 anchor_bottom = 0.9110001
-offset_left = -13.292
-offset_top = -8.976
-offset_right = 16.103996
-offset_bottom = 19.407997
+offset_left = -10.712
+offset_top = -8.9800005
+offset_right = 13.143997
+offset_bottom = 19.339996
 theme_override_font_sizes/font_size = 51
 text = "⚙️"
 
 [node name="orange button3" type="NinePatchRect" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_left = 594.0
-offset_top = 6.0
-offset_right = 668.0
-offset_bottom = 78.0
+offset_left = -95.0
+offset_right = -34.0
+offset_bottom = 63.0
 texture = ExtResource("6_bbp0q")
 patch_margin_left = 3
 patch_margin_top = 3
@@ -227,23 +226,23 @@ patch_margin_bottom = 3
 
 [node name="coinlabel" type="Label" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_left = 80.0
-offset_top = 25.0
-offset_right = 202.0
-offset_bottom = 57.0
+offset_left = -721.0
+offset_top = 13.0
+offset_right = -707.0
+offset_bottom = 45.0
 theme_override_fonts/font = SubResource("SystemFont_roh6j")
 theme_override_font_sizes/font_size = 23
 text = "0"
 
 [node name="gemlabel" type="Label" parent="Home Control/Top Bar"]
 layout_mode = 0
-offset_left = 292.0
-offset_top = 25.0
-offset_right = 397.0
-offset_bottom = 57.0
+offset_left = -564.0
+offset_top = 14.0
+offset_right = -459.0
+offset_bottom = 46.0
 theme_override_fonts/font = SubResource("SystemFont_roh6j")
 theme_override_font_sizes/font_size = 23
-text = "o"
+text = "0"
 
 [node name="PetAreaControl" type="Control" parent="Home Control"]
 layout_mode = 1
@@ -258,10 +257,10 @@ script = ExtResource("8_a7whw")
 
 [node name="PetNameLabel" type="RichTextLabel" parent="Home Control/PetAreaControl"]
 layout_mode = 0
-offset_left = 108.0
-offset_top = 206.5
-offset_right = 600.0
-offset_bottom = 259.5
+offset_left = -645.0
+offset_top = 163.5
+offset_right = -153.0
+offset_bottom = 216.5
 theme_override_font_sizes/normal_font_size = 37
 theme_override_font_sizes/bold_font_size = 37
 text = "fluffy"
@@ -270,16 +269,16 @@ horizontal_alignment = 1
 
 [node name="RenameButton" type="Button" parent="Home Control/PetAreaControl"]
 layout_mode = 0
-offset_left = 569.0
-offset_top = 206.5
-offset_right = 631.0
-offset_bottom = 268.5
+offset_left = -124.0
+offset_top = 165.5
+offset_right = -62.0
+offset_bottom = 227.5
 theme_override_font_sizes/font_size = 39
 text = "🏷️"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Home Control/PetAreaControl"]
-position = Vector2(376, 931.139)
-scale = Vector2(0.85365856, 0.9531177)
+position = Vector2(-385, 689.5)
+scale = Vector2(0.6646343, 0.7525772)
 sprite_frames = SubResource("SpriteFrames_js3mc")
 animation = &"idle"
 script = ExtResource("24_cl5sq")
@@ -378,9 +377,10 @@ script = ExtResource("18_vub6t")
 
 [node name="FoodButton" type="Button" parent="Home Control/FeedControl"]
 layout_mode = 0
-offset_left = 72.0
-offset_right = 188.0
-offset_bottom = 120.0
+offset_left = -720.0
+offset_top = -345.0
+offset_right = -604.0
+offset_bottom = -225.0
 pivot_offset = Vector2(200, 150)
 theme_override_font_sizes/font_size = 79
 theme_override_styles/normal = SubResource("StyleBoxFlat_lqk23")
@@ -402,10 +402,10 @@ offset_bottom = 40.0
 
 [node name="ShopButton" type="Button" parent="Home Control/ShopControl"]
 layout_mode = 0
-offset_left = 482.0
-offset_top = 1070.0
-offset_right = 657.0
-offset_bottom = 1233.0
+offset_left = -253.0
+offset_top = 712.0
+offset_right = -78.0
+offset_bottom = 849.0
 theme_override_font_sizes/font_size = 55
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5cp3b")
 text = "🏪
@@ -437,10 +437,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="EnergyBar" type="TextureProgressBar" parent="Home Control"]
 layout_mode = 0
-offset_left = 491.00003
-offset_top = 403.00003
-offset_right = 999.8889
-offset_bottom = 549.0
+offset_left = -277.99997
+offset_top = 421.0
+offset_right = 147.00003
+offset_bottom = 567.0
 scale = Vector2(0.45, 0.45)
 value = 100.0
 texture_under = SubResource("AtlasTexture_7ovmh")
@@ -460,16 +460,19 @@ theme_override_font_sizes/font_size = 35
 text = "100"
 
 [node name="TempCoinButton" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchor_right = 0.19000001
+offset_left = 222.0
+offset_top = -33.0
+offset_right = 109.999985
+offset_bottom = 7.0
 
 [node name="tempcoinbutton" type="Button" parent="TempCoinButton"]
 layout_mode = 0
-offset_left = 626.0
-offset_top = 943.0
-offset_right = 719.0
-offset_bottom = 1038.0
+offset_left = -379.0
+offset_top = 742.0
+offset_right = -286.0
+offset_bottom = 837.0
 script = ExtResource("32_roh6j")
 
 [connection signal="pressed" from="Home Control/ShopControl/ShopButton" to="Home Control/Top Bar" method="_on_shop_button_pressed"]
