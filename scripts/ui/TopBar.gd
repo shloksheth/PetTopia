@@ -21,8 +21,7 @@ func _ready() -> void:
 	popup.add_item("Exit", 2)
 	popup.id_pressed.connect(_on_menu_item_pressed)
 
-
-
+#ddd
 func _on_coins_changed(new_value: int) -> void:
 	coinlabel.text = str(new_value)
 
