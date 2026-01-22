@@ -3,9 +3,8 @@ extends Control
 @onready var coinlabel: Label = $coinlabel
 @onready var gemlabel: Label = $gemlabel
 @onready var settings_menu: MenuButton = $settingoutline/SettingsMenu
-@onready var settings_popup: PopupPanel = get_node("/root/Main/SettingsPopup")
-@onready var help_popup: PopupPanel = get_node("/root/Main/HelpPopup")
-
+@onready var settings_popup: PopupPanel = $"../SettingsPopup"
+@onready var help_popup: PopupPanel = $"../Help Popup"
 
 func _ready() -> void:
 	coinlabel.text = str(Global.coins)
@@ -21,7 +20,8 @@ func _ready() -> void:
 	popup.add_item("Exit", 2)
 	popup.id_pressed.connect(_on_menu_item_pressed)
 
-#ddd
+
+
 func _on_coins_changed(new_value: int) -> void:
 	coinlabel.text = str(new_value)
 
@@ -39,7 +39,4 @@ func _on_menu_item_pressed(id: int) -> void:
 
 
 func _on_shop_button_pressed():
-	get_node("/root/Main").change_screen("res://scenes/shop/shop.tscn")
-func update_ui() -> void:
-	coinlabel.text = str(Global.coins)
-	gemlabel.text = str(Global.gems)
+	get_tree().change_scene_to_file("res://scenes/shop/shop.tscn")

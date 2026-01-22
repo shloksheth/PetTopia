@@ -3,21 +3,19 @@ extends Control
 func _ready():
 	$WarningLabel.hide()
 	update_ui()
-
+	
 func update_ui():
-	# Update food inventory UI
+	$Stats/CoinBar/CoinLabel.text = str(Global.coins)
+	$Stats/GemBar/GemLabel.text = str(Global.gems)
+	
 	$GridContainer/ApplePanel/AppleOwned.text = "Owned: " + str(Global.food_inventory["Apple"])
 	$GridContainer/PizzaPanel/PizzaOwned.text = "Owned: " + str(Global.food_inventory["Pizza"])
 	$GridContainer/MeatPanel/MeatOwned.text = "Owned: " + str(Global.food_inventory["Meat"])
 	$GridContainer/FishPanel/FishOwned.text = "Owned: " + str(Global.food_inventory["Fish"])
 
-	# Update the global TopBar
-	var topbar := get_node("/root/Main/TopBar")
-	topbar.update_ui()
-
 func _on_apple_buy_button_pressed():
 	if Global.buy_item("Apple", 10):
-		update_ui()
+		update_ui() 
 		$WarningLabel.hide()
 	else:
 		show_error("Not Enough Coins!")
@@ -42,11 +40,10 @@ func _on_fish_buy_button_pressed():
 		$WarningLabel.hide()
 	else:
 		show_error("Not Enough Coins!")
-
+		
 func _on_home_button_pressed():
-	var main := get_tree().root.get_node("Main")
-	main.change_screen("res://scenes/home/home.tscn")
-
+	get_tree().change_scene_to_file("res://scenes/home.tscn")
+		
 func show_error(message: String):
 	$WarningLabel.text = message
 	$WarningLabel.show()
