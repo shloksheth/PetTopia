@@ -63,7 +63,7 @@ atlas = ExtResource("4_ajxib")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuijs"]
 bg_color = Color(0.11764706, 0.7254902, 0, 1)
 
-[node name="Shop" type="Control"]
+[node name="Shop2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
