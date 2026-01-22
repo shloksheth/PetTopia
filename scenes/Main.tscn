@@ -24,9 +24,11 @@ script = ExtResource("1_jlsqs")
 
 [node name="TopBar" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 80.0
+anchor_right = 0.92100006
+anchor_bottom = 0.081
+offset_left = 8.0
+offset_right = 40.24994
+offset_bottom = 16.800003
 grow_horizontal = 2
 script = ExtResource("2_q8u5g")
 
@@ -208,5 +210,5 @@ text = "Close"
 
 [node name="ScreenContainer" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 750.0
+offset_bottom = 1200.0
