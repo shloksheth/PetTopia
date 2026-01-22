@@ -33,6 +33,10 @@ window/handheld/orientation=1
 
 project/assembly_name="PetTopia"
 
+[editor]
+
+version_control/autoload_on_startup=true
+
 [rendering]
 
 renderer/rendering_method="mobile"
